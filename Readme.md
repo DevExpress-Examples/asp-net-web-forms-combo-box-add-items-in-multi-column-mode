@@ -9,7 +9,7 @@ This example demonstrates how to create a multi-column combo box editor and popu
 
 ## Overview
 
-Create a [combo box](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxComboBox#multi-column-mode) editor and popupulate it with columns.
+Create a [combo box](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxComboBox#multi-column-mode) editor and populate it with columns.
 
 ```aspx
 <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" 
