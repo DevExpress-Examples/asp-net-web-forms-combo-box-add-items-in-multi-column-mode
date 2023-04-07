@@ -1,22 +1,52 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128537651/13.1.4%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1332)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
-
-* [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
-* [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
-<!-- default file list end -->
-# How to add items to a multi-column ASPxComboBox on the client side
+# Combo Box for ASP.NET Web Forms - How to add items to an editor on the client in multi-column mode
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e1332/)**
 <!-- run online end -->
 
+This example demonstrates how to create a multi-column combo box editor and populate it with items on the client.
 
-<p>This example demonstrates how ASPxComboBox items can be manipulated on the client side. The <strong>AddItem</strong> method is used to add a new item, which contains the <i>First Name</i> and <i>Last Name</i> text editor's information, to the end of the ASPxComboBox items collection. The client-side <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxEditorsScriptsASPxClientComboBox_ClearItemstopic"><u>ClearItems</u></a> method is used to delete all items from the ASPxComboBox items collection.</p>
+![Add Item to Combo Box](addItems.gif)
 
-<br/>
+## Overview
 
+Create a [combo box](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxComboBox#multi-column-mode) editor and popupulate it with columns.
 
+```aspx
+<dx:ASPxComboBox ID="ASPxComboBox1" runat="server" 
+    ClientInstanceName="comboBox" ValueType="System.String" Width="350px" TextFormatString="{0} {1}">
+    <Columns>
+        <dx:ListBoxColumn Caption="First Name" Name="First Name" ToolTip="First Name" />
+        <dx:ListBoxColumn Caption="Last Name" Name="Last Name" ToolTip="Last Name" />
+    </Columns>
+</dx:ASPxComboBox>
+```
+
+Add a text editor and a button to the page. In the button's client-side `Click` event handler, call the combo box editor's [AddItems](https://docs.devexpress.com/AspNet/js-ASPxClientComboBox.AddItem(text)) method to add an item to the editor's item collection based on the text editor's value. To remove all items from the collection, call the editor's [ClearItems](https://docs.devexpress.com/AspNet/js-ASPxClientComboBox.ClearItems) method.
+
+```aspx
+<dx:ASPxTextBox ID="ASPxTextBox1" runat="server" ClientInstanceName="firstName" Width="170px" />
+<dx:ASPxTextBox ID="ASPxTextBox2" runat="server" ClientInstanceName="lastName" Width="170px" />
+<dx:ASPxButton ID="ASPxButton2" runat="server" Text="Add " AutoPostBack="False">
+    <ClientSideEvents Click="function(s, e) {
+	    var fName=firstName.GetValue();
+	    var lName=lastName.GetValue();
+	    firstName.SetText('');
+	    lastName.SetText(''); 
+        var FullName = new Array(fName,lName);	
+	    comboBox.AddItem(FullName);
+    }" />
+</dx:ASPxButton>
+<dx:ASPxButton ID="ASPxButton1" runat="server" Text="Clear Items" AutoPostBack="False">
+    <ClientSideEvents Click="function(s, e) {
+	    comboBox.ClearItems();
+    }" />
+</dx:ASPxButton>
+```
+
+## Files to Review
+
+* [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
+
+## Documentation
+
+* [Multi-Column Mode](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxComboBox#multi-column-mode)
