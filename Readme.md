@@ -1,6 +1,6 @@
 # Combo Box for ASP.NET Web Forms - How to add items to an editor on the client in multi-column mode
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e1332/)**
+**[[Run Online]](https://codecentral.devexpress.com/128537651/)**
 <!-- run online end -->
 
 This example demonstrates how to create a multi-column combo box editor and populate it with items on the client.
