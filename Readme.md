@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Combo Box for ASP.NET Web Forms - How to add items to an editor on the client in multi-column mode
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128537651/)**
-<!-- run online end -->
 
 This example demonstrates how to create a multi-column combo box editor and populate it with items on the client.
 
