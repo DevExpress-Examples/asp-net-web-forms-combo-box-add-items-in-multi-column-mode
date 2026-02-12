@@ -54,7 +54,7 @@ Add a text editor and a button to the page. In the button's client-side `Click` 
 
 * [Multi-Column Mode](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxComboBox#multi-column-mode)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-combo-box-add-items-in-multi-column-mode&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-combo-box-add-items-in-multi-column-mode&~~~was_helpful=no)
 
